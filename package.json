@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "icons:generate": "npx @svgr/cli --out-dir generated -- SVG"
+    "icons:generate": "npx @svgr/cli --out-dir generated --typescript -- SVG"
   },
   "repository": {
     "type": "git",
