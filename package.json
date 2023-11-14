@@ -1,0 +1,23 @@
+{
+  "name": "@anatomy/icons",
+  "version": "0.0.1",
+  "description": "Icon library for Anatomy design system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "icons:generate": "npx @svgr/cli --out-dir generated --typescript -- SVG"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bos-sci/anatomy-icons.git"
+  },
+  "author": "Anatomy Design System",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/bos-sci/anatomy-icons/issues"
+  },
+  "homepage": "https://github.com/bos-sci/anatomy-icons#readme",
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0"
+  }
+}
