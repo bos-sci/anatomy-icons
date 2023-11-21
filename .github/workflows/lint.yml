@@ -34,5 +34,3 @@ jobs:
           eslint: true
           eslint_extensions: js,ts,tsx
           prettier: true
-          stylelint: true
-          stylelint_extensions: css,scss
