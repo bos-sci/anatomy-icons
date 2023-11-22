@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "icons:generate": "npx @svgr/cli --out-dir generated --typescript -- SVG"
+    "icons:generate": "npx @svgr/cli --out-dir generated --typescript -- SVG",
+    "lint:scripts": "eslint .",
+    "fix:scripts": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:all": "npm run lint:scripts && npm run format:check",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,21 @@
   },
   "homepage": "https://github.com/bos-sci/anatomy-icons#readme",
   "devDependencies": {
-    "@svgr/cli": "^8.1.0"
+    "@boston-scientific/eslint-config": "^0.0.3",
+    "@boston-scientific/prettier-config": "^1.0.1",
+    "@svgr/cli": "^8.1.0",
+    "eslint": "^8.54.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,html,css,scss}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+  },
+  "prettier": "@boston-scientific/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@boston-scientific/eslint-config"
+    ]
   }
 }
